@@ -1,0 +1,218 @@
+.auth-page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  padding-top: calc(var(--navbar-height) + 2rem);
+}
+
+.auth-card-premium {
+  position: relative;
+  z-index: 1;
+  background: #D9D9D9;
+  border: 2px solid #DD0200;
+  border-radius: 24px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 60px rgba(221, 2, 0, 0.22);
+}
+
+.auth-brand {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-brand-icon {
+  width: 60px; height: 60px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #DD0200, #DD0200);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; color: #D9D9D9;
+  margin: 0 auto 1rem;
+  box-shadow: 0 8px 24px rgba(221,2,0,0.4);
+}
+
+.auth-title {
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-bottom: 4px;
+  color: #DD0200;
+}
+
+.auth-subtitle {
+  color: #DD0200;
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+/* ── Field ── */
+.auth-field {
+  margin-bottom: 1.1rem;
+}
+
+.auth-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #DD0200;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* ── Input box wrapper ── */
+.auth-input-box {
+  display: flex;
+  align-items: center;
+  background: #D9D9D9;
+  border: 1px solid #DD0200;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-input-box:focus-within {
+  border-color: #DD0200;
+  box-shadow: 0 0 0 3px rgba(221, 2, 0, 0.18);
+}
+
+/* ── Icon — separate flex child before input ── */
+.auth-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  min-height: 46px;
+  color: #DD0200;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  background: #D9D9D9;
+  border-right: 1px solid rgba(221, 2, 0, 0.3);
+}
+
+/* ── Input ── */
+.auth-input {
+  flex: 1;
+  width: 100%;
+  border: none !important;
+  outline: none !important;
+  color: #DD0200 !important;
+  font-size: 0.9rem !important;
+  padding: 0.7rem 1rem !important;
+  background: #D9D9D9 !important;
+  caret-color: #DD0200;
+
+  /* ── Kill browser autofill white background ── */
+  -webkit-box-shadow: 0 0 0px 1000px #D9D9D9 inset !important;
+  box-shadow: 0 0 0px 1000px #D9D9D9 inset !important;
+  -webkit-text-fill-color: #DD0200 !important;
+}
+
+.auth-input::placeholder {
+  color: #DD0200 !important;
+  -webkit-text-fill-color: #DD0200 !important;
+}
+
+.auth-input:focus {
+  background: #D9D9D9 !important;
+  -webkit-box-shadow: 0 0 0px 1000px #D9D9D9 inset !important;
+  box-shadow: 0 0 0px 1000px #D9D9D9 inset !important;
+  -webkit-text-fill-color: #DD0200 !important;
+}
+
+/* ── Autofill state — Chrome/Edge saved passwords ── */
+.auth-input:-webkit-autofill,
+.auth-input:-webkit-autofill:hover,
+.auth-input:-webkit-autofill:focus,
+.auth-input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px #D9D9D9 inset !important;
+  box-shadow: 0 0 0px 1000px #D9D9D9 inset !important;
+  -webkit-text-fill-color: #DD0200 !important;
+  caret-color: #DD0200;
+}
+
+/* ── Eye toggle (password field) ── */
+.auth-eye {
+  background: #D9D9D9;
+  border: none;
+  color: #DD0200;
+  padding: 0 14px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+}
+.auth-eye:hover { color: #DD0200; }
+
+/* ── Submit button ── */
+.auth-submit {
+  width: 100%;
+  justify-content: center;
+  padding: 0.78rem;
+  font-size: 0.95rem;
+  margin-top: 0.75rem;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+}
+
+.auth-submit:hover {
+  box-shadow: none !important;
+}
+
+/* ── Footer ── */
+.auth-footer-text {
+  text-align: center;
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  color: #DD0200;
+}
+
+.auth-link {
+  color: #DD0200;
+  font-weight: 600;
+  text-decoration: none;
+}
+.auth-link:hover { color: #DD0200; text-decoration: none; }
+
+/* ── Role toggle (Register page) ── */
+.role-toggle {
+  display: flex;
+  gap: 4px;
+  background: #D9D9D9;
+  border: 1px solid #DD0200;
+  border-radius: 9999px;
+  padding: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.role-toggle-btn {
+  flex: 1;
+  padding: 0.48rem 1rem;
+  border: none;
+  border-radius: 9999px;
+  background: transparent;
+  color: #DD0200;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.role-toggle-btn:hover { color: #DD0200; }
+
+.role-toggle-btn.active {
+  background: #DD0200;
+  color: #D9D9D9;
+  font-weight: 700;
+}
+
+.role-toggle-btn.active-admin {
+  background: #DD0200;
+  color: #D9D9D9;
+  font-weight: 700;
+}
