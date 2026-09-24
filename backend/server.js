@@ -4,6 +4,13 @@ const morgan = require("morgan");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 
+const dns = require("dns");
+
+dns.setServers([
+  "8.8.8.8",
+  "1.1.1.1"
+]);
+
 // ─── Load environment variables ───────────────────────────
 dotenv.config();
 
